@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val PASSWORD_PATTERN: Pattern = Pattern.compile("^[a-zA-Z0-9!@.#$%^&*?_~]{4,16}$")
 
     // 파이어베이스 인증 객체 생성
-    private var firebaseAuth : FirebaseAuth ? = null
+    private var firebaseAuth: FirebaseAuth? = null
 
     // 이메일과 비밀번호
     private var editTextStudentNum: TextView? = null
@@ -35,11 +35,11 @@ class MainActivity : AppCompatActivity() {
         // 파이어베이스 인증 객체 선언
         firebaseAuth = FirebaseAuth.getInstance()
 
-        editTextStudentNum = textView
-        editTextPassword = textView2
+        editTextStudentNum = editTextTextEmailAddress
+        editTextPassword = editTextTextPassword
 
-        btnlogin.setOnClickListener{
-            val intent= Intent(this,CheckList::class.java)
+        btnlogin.setOnClickListener {
+            val intent = Intent(this, CheckList::class.java)
             startActivity(intent)
         } //버튼
     } //onCreate 닫는 괄호
@@ -93,23 +93,25 @@ class MainActivity : AppCompatActivity() {
 
     // 회원가입
     private fun createUser(email: String, password: String) {
-        firebaseAuth!!.createUserWithEmailAndPassword(studentnum, password).addOnCompleteListener(this) { task ->
+        firebaseAuth!!.createUserWithEmailAndPassword(studentnum, password)
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // 회원가입 성공
-                    Toast.makeText(this@MainActivity,"회원가입 완료",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "회원가입 완료", Toast.LENGTH_SHORT).show()
                 } else {
                     // 회원가입 실패
-                    Toast.makeText(this@MainActivity, "회원가입 실패",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "회원가입 실패", Toast.LENGTH_SHORT).show()
                 }
             }
     }
 
     //로그인
     private fun loginUser(email: String, password: String) {
-        firebaseAuth!!.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+        firebaseAuth!!.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // 로그인 성공
-                    Toast.makeText(this@MainActivity,"로그인 성공",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "로그인 성공", Toast.LENGTH_SHORT).show()
                 } else {
                     // 로그인 실패
                     Toast.makeText(this@MainActivity, "로그인 실패", Toast.LENGTH_SHORT).show()
