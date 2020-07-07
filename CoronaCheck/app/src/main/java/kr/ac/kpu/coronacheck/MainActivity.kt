@@ -1,13 +1,19 @@
 package kr.ac.kpu.coronacheck
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //안보여요
-        //보이시나요 ㅇㅇㅇㅇㅇㅇㅇ???
+
+        btnlogin.setOnClickListener{
+            val intent= Intent(this,CheckList::class.java)
+            startActivity(intent)
+        }
+
     }
 }
