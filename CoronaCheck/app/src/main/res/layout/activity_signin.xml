@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckList">
+    tools:context=".signin">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -23,11 +23,11 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"
-                android:text="확인"
+                android:text="Sign-in"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rdgcheck5" />
+                app:layout_constraintTop_toBottomOf="@+id/edtckpassword" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="5dp"
-                android:text="1. 발열 온도 체크"
+                android:text="1. 이름"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -58,53 +58,43 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:ems="10"
-                android:hint="℃"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtname" />
+                app:layout_constraintTop_toBottomOf="@+id/txtname"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/txtnum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:text="2. 마른 기침, 콧물 등의 감기 증상 여부"
+                android:layout_marginTop="20dp"
+                android:text="2. 학번"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Edtname" />
 
-            <RadioGroup
-                android:id="@+id/rdgcheck2"
+            <EditText
+                android:id="@+id/edtnum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="11dp"
-                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:ems="10"
+                android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtnum">
-
-                <RadioButton
-                    android:id="@+id/pos2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="예" />
-
-                <RadioButton
-                    android:id="@+id/neg2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="아니오" />
-            </RadioGroup>
+                app:layout_constraintTop_toBottomOf="@+id/txtnum"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/txtsubject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:text="3. 피로감, 전신통증, 두통, 인후통, 설사 증상 여부"
+                android:layout_marginTop="20dp"
+                android:text="3. 수강과목"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rdgcheck2" />
+                app:layout_constraintTop_toBottomOf="@+id/edtnum" />
 
             <RadioGroup
                 android:id="@+id/rdgsubject"
@@ -120,13 +110,13 @@
                     android:id="@+id/pos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="예" />
+                    android:text="Firebase" />
 
                 <RadioButton
                     android:id="@+id/neg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="아니오" />
+                    android:text="iOS Swift" />
             </RadioGroup>
 
             <TextView
@@ -134,67 +124,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:text="4. 마스크 착용 여부"
+                android:layout_marginTop="20dp"
+                android:text="4. 비밀번호"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rdgsubject" />
 
-            <RadioGroup
-                android:id="@+id/rdgcheck4"
+            <EditText
+                android:id="@+id/edtpassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
+                android:background="@drawable/button"
+                android:ems="10"
+                android:inputType="textPassword"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtpassword">
-
-                <RadioButton
-                    android:id="@+id/pos4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="예" />
-
-                <RadioButton
-                    android:id="@+id/neg4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="아니오" />
-            </RadioGroup>
+                app:layout_constraintTop_toBottomOf="@+id/txtpassword" />
 
             <TextView
-                android:id="@+id/check5"
+                android:id="@+id/txtckpassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:text="5. 손 소독 여부"
+                android:layout_marginTop="20dp"
+                android:text="5. 비밀번호 확인"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rdgcheck4" />
+                app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
 
-            <RadioGroup
-                android:id="@+id/rdgcheck5"
+            <EditText
+                android:id="@+id/edtckpassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
+                android:background="@drawable/button"
+                android:ems="10"
+                android:inputType="textPassword"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/check5">
-
-                <RadioButton
-                    android:id="@+id/pos5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="예" />
-
-                <RadioButton
-                    android:id="@+id/neg5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="아니오" />
-
-            </RadioGroup>
+                app:layout_constraintTop_toBottomOf="@+id/txtckpassword" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
