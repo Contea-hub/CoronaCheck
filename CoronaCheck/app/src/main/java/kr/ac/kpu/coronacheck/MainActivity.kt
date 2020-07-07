@@ -10,8 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnlogin.setOnClickListener(){
-            val intent= Intent(this,CheckList.class)
+        btnlogin.setOnClickListener{
+            val intent= Intent(this,CheckList::class.java)
             startActivity(intent)
         }
 
