@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211940303971",
+    "firebase_url": "https://coronacheck-47f7a.firebaseio.com",
+    "project_id": "coronacheck-47f7a",
+    "storage_bucket": "coronacheck-47f7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211940303971:android:7f60fd69b9eefdfd1e8456",
+        "android_client_info": {
+          "package_name": "kr.ac.kpu.coronacheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211940303971-tmr7km0uflc37u1u3eh1eia5g5phu7gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5qbNxevOFT2Wns5dBU4A5ByRrjy-ARxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211940303971-tmr7km0uflc37u1u3eh1eia5g5phu7gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
