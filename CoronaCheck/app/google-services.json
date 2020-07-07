@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "742782977144",
+    "firebase_url": "https://coronacheck-f0540.firebaseio.com",
+    "project_id": "coronacheck-f0540",
+    "storage_bucket": "coronacheck-f0540.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742782977144:android:f528e8c24686203072598d",
+        "android_client_info": {
+          "package_name": "kr.ac.kpu.coronacheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742782977144-0rqd92c8364ja57b4iqq4lt53ms1jtbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.kpu.coronacheck",
+            "certificate_hash": "514821bbb33facfb7e203584ec79f257f263a292"
+          }
+        },
+        {
+          "client_id": "742782977144-489q4btv7slavi0kd1gasskjbqnq44r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI3tDSu9wKNRQC4kmlHUEcdF0_uPmlwxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742782977144-489q4btv7slavi0kd1gasskjbqnq44r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
