@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoronaCheck</string>
+    <string name="celsius">℃</string>
+    <string name="Celsius">Name</string>
 </resources>
