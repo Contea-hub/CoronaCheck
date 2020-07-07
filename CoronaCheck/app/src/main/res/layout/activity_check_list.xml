@@ -6,170 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".CheckList">
 
-    <TextView
-        android:id="@+id/check1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="150dp"
-        android:text="1. 발열 온도 체크"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/Edttemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button"
-        android:ems="10"
-        android:hint="℃"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check1" />
-
-    <TextView
-        android:id="@+id/check2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:text="2. 마른 기침, 콧물 등의 감기 증상 여부"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Edttemp" />
-
-    <RadioGroup
-        android:id="@+id/rdgcheck2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check2">
-
-        <RadioButton
-            android:id="@+id/pos2"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="예" />
+            android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/neg2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아니오" />
-    </RadioGroup>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="177dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:text="확인"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgcheck5" />
 
-    <TextView
-        android:id="@+id/check3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:text="3. 피로감, 전신통증, 두통, 인후통, 설사 증상 여부"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdgcheck2" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="328dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kpu" />
 
-    <RadioGroup
-        android:id="@+id/rdgcheck3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check3">
+            <TextView
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:text="1. 발열 온도 체크"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <RadioButton
-            android:id="@+id/pos3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="예" />
+            <EditText
+                android:id="@+id/Edttemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:ems="10"
+                android:hint="℃"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check1" />
 
-        <RadioButton
-            android:id="@+id/neg3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아니오" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:text="2. 마른 기침, 콧물 등의 감기 증상 여부"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edttemp" />
 
-    <TextView
-        android:id="@+id/check4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:text="4. 마스크 착용 여부"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdgcheck3" />
+            <RadioGroup
+                android:id="@+id/rdgcheck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check2">
 
-    <RadioGroup
-        android:id="@+id/rdgcheck4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check4">
+                <RadioButton
+                    android:id="@+id/pos2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="예" />
 
-        <RadioButton
-            android:id="@+id/pos4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="예" />
+                <RadioButton
+                    android:id="@+id/neg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아니오" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/neg4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아니오" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:text="3. 피로감, 전신통증, 두통, 인후통, 설사 증상 여부"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgcheck2" />
 
-    <TextView
-        android:id="@+id/check5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:text="5. 손 소독 여부"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdgcheck4" />
+            <RadioGroup
+                android:id="@+id/rdgcheck3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check3">
 
-    <RadioGroup
-        android:id="@+id/rdgcheck5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check5">
+                <RadioButton
+                    android:id="@+id/pos3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="예" />
 
-        <RadioButton
-            android:id="@+id/pos5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="예" />
+                <RadioButton
+                    android:id="@+id/neg3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아니오" />
+            </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/neg5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아니오" />
-    </RadioGroup>
+            <TextView
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:text="4. 마스크 착용 여부"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgcheck3" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="328dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kpu" />
+            <RadioGroup
+                android:id="@+id/rdgcheck4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check4">
+
+                <RadioButton
+                    android:id="@+id/pos4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="예" />
+
+                <RadioButton
+                    android:id="@+id/neg4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아니오" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/check5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:text="5. 손 소독 여부"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgcheck4" />
+
+            <RadioGroup
+                android:id="@+id/rdgcheck5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check5">
+
+                <RadioButton
+                    android:id="@+id/pos5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="예" />
+
+                <RadioButton
+                    android:id="@+id/neg5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아니오" />
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
