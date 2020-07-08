@@ -10,12 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var intent:Intent
         btnlogin.setOnClickListener{
-            val intent= Intent(this,CheckList::class.java)
+            if(cbadmin.isChecked)
+                intent= Intent(this,ListStudent::class.java)
+            else
+                intent=Intent(this,CheckList::class.java)
+
             startActivity(intent)
         }
         btnsignin.setOnClickListener{
-            val intent= Intent(this,ListStudent::class.java)
+            val intent= Intent(this,signin::class.java)
             startActivity(intent)
         }
     }
