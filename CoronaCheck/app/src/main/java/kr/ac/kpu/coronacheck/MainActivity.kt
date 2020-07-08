@@ -110,6 +110,19 @@ class MainActivity : AppCompatActivity() {
         }
         btnsignin.setOnClickListener{       //회원가입 버튼
             createEmail()
+
+        var intent:Intent
+        btnlogin.setOnClickListener{
+            if(cbadmin.isChecked)
+                intent= Intent(this,ListStudent::class.java)
+            else
+                intent=Intent(this,CheckList::class.java)
+
+            startActivity(intent)
+        }
+        btnsignin.setOnClickListener{
+            val intent= Intent(this,signin::class.java)
+            startActivity(intent)
         }
     }
 }

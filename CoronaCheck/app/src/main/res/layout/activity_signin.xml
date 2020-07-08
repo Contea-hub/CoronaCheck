@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnsignin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".signin">
@@ -18,7 +19,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnsignin"
+                android:id="@+id/btnfinish"
                 android:layout_width="177dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="30dp"
@@ -58,10 +59,10 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtname"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/txtname" />
 
             <TextView
                 android:id="@+id/txtnum"
@@ -79,12 +80,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
+                android:autofillHints=""
                 android:background="@drawable/button"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtnum"
-                android:autofillHints="" />
+                app:layout_constraintTop_toBottomOf="@+id/txtnum" />
 
             <TextView
                 android:id="@+id/txtsubject"
