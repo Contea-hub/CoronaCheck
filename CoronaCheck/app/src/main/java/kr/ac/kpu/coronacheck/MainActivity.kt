@@ -1,5 +1,6 @@
 package kr.ac.kpu.coronacheck
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     private val RC_SIGN_IN = 9001       //google login result
     private var firebaseAuth: FirebaseAuth? = null      //firebase auth
-
+    data class UserInfo(var stunum : String? = null, var temp : String? =null, var q1 : Boolean? = null, var q2 : Boolean? =null,
+    var q3 : Boolean? = null, var q4 : Boolean? =null)      //DB 유저 정보 저장 유형
     private fun createEmail(){
         if(editTextTextEmailAddress.text.toString() == "" || editTextTextPassword.text.toString() == ""){
             Toast.makeText(this, "Authentication fail", Toast.LENGTH_SHORT).show()
@@ -42,11 +44,31 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "signInWithEmail success.", Toast.LENGTH_SHORT).show()
                     val user = firebaseAuth?.currentUser
                     val intent = Intent(this, CheckList::class.java)
-                    startActivity(intent)
+                    intent.putExtra("stunum", editTextTextEmailAddress.text.toString())
+                    startActivityForResult(intent, 0)
                 } else {
                     Toast.makeText(this, "signInWithEmail failed.", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        var stunum : String?
+        var q1 : Boolean?
+        var q2 : Boolean?
+        var q3 : Boolean?
+        var q4 : Boolean?
+        var temp : String?
+        if(resultCode == Activity.RESULT_OK){
+            stunum = data!!.getStringExtra("stunum")
+            q1 = data!!.getBooleanExtra("q1", true)
+            q2 = data!!.getBooleanExtra("q2", true)
+            q3 = data!!.getBooleanExtra("q3", true)
+            q4 = data!!.getBooleanExtra("q4", true)
+            temp = data!!.getStringExtra("temp")
+            Toast.makeText(this, "${stunum}, ${q1}, ${q2},${q3},${q4},${temp}", Toast.LENGTH_SHORT).show()
         }
     }
 
