@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             val postListener = object : ValueEventListener{
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val post = dataSnapshot.getValue()
-                    Log.d("han1", "$post")
+                    Log.d("han",dataSnapshot.child(stunum).value.toString())        //로그에 학번 정보 표시
                 }
 
                 override fun onCancelled(p0: DatabaseError) {
@@ -104,12 +104,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         firebaseAuth = FirebaseAuth.getInstance()//
         mDatabase = FirebaseDatabase.getInstance().reference
-        mMessageReference = FirebaseDatabase.getInstance().getReference("${editTextTextEmailAddress.text.toString()}")
-        btnlogin.setOnClickListener{        //로그인 버튼
+        mMessageReference = FirebaseDatabase.getInstance()
+            .getReference("${editTextTextEmailAddress.text.toString()}")
+        btnlogin.setOnClickListener {        //로그인 버튼
             loginEmail()
         }
-        btnsignin.setOnClickListener{       //회원가입 버튼
+        btnsignin.setOnClickListener {       //회원가입 버튼
             createEmail()
+/*
+        var intent:Intent
+        btnlogin.setOnClickListener{
+            if(cbadmin.isChecked)
+                intent= Intent(this,ListStudent::class.java)
+            else
+                intent=Intent(this,CheckList::class.java)
+
+            startActivity(intent)
+        }
+        btnsignin.setOnClickListener{
+            val intent= Intent(this,signin::class.java)
+            startActivity(intent)
+        }
+
+ */
         }
     }
 }
