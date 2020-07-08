@@ -24,7 +24,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:minWidth="70dp"
+                    android:minWidth="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="35dp"
                     android:text="이름" />
 
                 <TextView
@@ -33,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:minWidth="70dp"
+                    android:minWidth="50dp"
                     android:text="학번" />
 
                 <TextView
@@ -41,8 +43,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:minWidth="70dp"
+                    android:gravity="center|right"
+                    android:minWidth="80dp"
                     android:text="수강과목" />
 
                 <TextView
@@ -51,8 +53,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:minWidth="70dp"
+                    android:minWidth="60dp"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginRight="5dp"
                     android:text="출석" />
 
             </TableRow>
