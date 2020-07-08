@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             //Toast.makeText(this, "${stunum}, ${q1}, ${q2},${q3},${q4},${temp}", Toast.LENGTH_SHORT).show()
             var userInfo = UserInfo(stunum, temp, q1, q2, q3, q4)
             database = Firebase.database.reference
-            database.child("users").child(stunum).setValue(userInfo)
+            database.child(stunum).setValue(userInfo)
             val postListener = object : ValueEventListener{
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val post = dataSnapshot.getValue()
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         firebaseAuth = FirebaseAuth.getInstance()//
         mDatabase = FirebaseDatabase.getInstance().reference
-        mMessageReference = FirebaseDatabase.getInstance().getReference("users")
+        mMessageReference = FirebaseDatabase.getInstance().getReference("${editTextTextEmailAddress.text.toString()}")
         btnlogin.setOnClickListener{        //로그인 버튼
             loginEmail()
         }
