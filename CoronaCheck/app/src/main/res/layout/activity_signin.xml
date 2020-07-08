@@ -107,13 +107,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtsubject">
 
                 <RadioButton
-                    android:id="@+id/pos"
+                    android:id="@+id/pos2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Firebase" />
 
                 <RadioButton
-                    android:id="@+id/neg"
+                    android:id="@+id/neg2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="iOS Swift" />
