@@ -104,13 +104,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         firebaseAuth = FirebaseAuth.getInstance()//
         mDatabase = FirebaseDatabase.getInstance().reference
-        mMessageReference = FirebaseDatabase.getInstance().getReference("${editTextTextEmailAddress.text.toString()}")
-        btnlogin.setOnClickListener{        //로그인 버튼
+        mMessageReference = FirebaseDatabase.getInstance()
+            .getReference("${editTextTextEmailAddress.text.toString()}")
+        btnlogin.setOnClickListener {        //로그인 버튼
             loginEmail()
         }
-        btnsignin.setOnClickListener{       //회원가입 버튼
+        btnsignin.setOnClickListener {       //회원가입 버튼
             createEmail()
-
+/*
         var intent:Intent
         btnlogin.setOnClickListener{
             if(cbadmin.isChecked)
@@ -123,6 +124,9 @@ class MainActivity : AppCompatActivity() {
         btnsignin.setOnClickListener{
             val intent= Intent(this,signin::class.java)
             startActivity(intent)
+        }
+
+ */
         }
     }
 }
