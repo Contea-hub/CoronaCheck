@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             val postListener = object : ValueEventListener{
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     val post = dataSnapshot.getValue()
-                    Log.d("han1", "$post")
+                    Log.d("han",dataSnapshot.child(stunum).value.toString())        //로그에 학번 정보 표시
                 }
 
                 override fun onCancelled(p0: DatabaseError) {
