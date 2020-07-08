@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this,CheckList::class.java)
             startActivity(intent)
         }
-
+        btnsignin.setOnClickListener{
+            val intent= Intent(this,ListStudent::class.java)
+            startActivity(intent)
+        }
     }
 }

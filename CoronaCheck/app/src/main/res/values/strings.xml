@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CoronaCheck</string>
+    <string name="app_name" translatable="false">CoronaCheck</string>
     <string name="celsius">℃</string>
     <string name="Celsius">Name</string>
     <string name="neg">아니오</string>

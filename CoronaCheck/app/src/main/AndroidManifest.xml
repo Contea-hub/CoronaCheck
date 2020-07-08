@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/kppp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckList"></activity>
+        <activity android:name=".ListStudent"></activity>
+        <activity android:name=".signin" />
+        <activity android:name=".CheckList" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
