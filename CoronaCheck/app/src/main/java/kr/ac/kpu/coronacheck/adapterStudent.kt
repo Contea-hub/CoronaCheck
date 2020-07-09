@@ -33,9 +33,7 @@ class adapterStudent(val context: Context, val studentList:ArrayList<student>) :
         return studentList[position]
     }
 
-    override fun getItemId(position: Int): Long {
-        return 0
-    }
+    override fun getItemId(position: Int)=position.toLong()
 
     override fun getCount(): Int {
         return studentList.size

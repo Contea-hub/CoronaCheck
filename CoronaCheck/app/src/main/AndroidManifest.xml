@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/kppp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListStudent"></activity>
+        <activity android:name=".studentinformation"></activity>
+        <activity android:name=".ListStudent" />
         <activity android:name=".signin" />
         <activity android:name=".CheckList" />
         <activity android:name=".MainActivity">

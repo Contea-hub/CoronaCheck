@@ -3,6 +3,8 @@ package kr.ac.kpu.coronacheck
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
+import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_list_student.*
 
 class ListStudent : AppCompatActivity() {
@@ -20,12 +22,13 @@ class ListStudent : AppCompatActivity() {
         var bundle:Bundle
         var intent: Intent
         val studentAdapter=adapterStudent(this,studentList)
+        val listview: ListView =findViewById(R.id.studentListview)
         studentListview.adapter=studentAdapter
 
-        studentListview.setOnItemClickListener{parent,view,position,id->
-            data=studentListview.getItemAtPosition(position)
-            //intent= Intent(this,student_information::class.java)
-            //intent.putExtra("name",data.name)
+        listview.setOnItemClickListener{ parent, view, position, id->
+            val selectedItem=studentAdapter.getItemId(position)
+            intent= Intent(this,studentinformation::class.java)
+            startActivity(intent)
 
         }
 

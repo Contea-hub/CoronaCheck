@@ -6,62 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".ListStudent">
 
-    <ScrollView
-        android:id="@+id/scrollView3"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/underline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@drawable/underline">
-            <TableRow>
+        <TableRow>
 
-                <TextView
-                    android:id="@+id/txtname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:minWidth="60dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="35dp"
-                    android:text="이름" />
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="35dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text="이름" />
 
-                <TextView
-                    android:id="@+id/txthak"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:minWidth="50dp"
-                    android:text="학번" />
+            <TextView
+                android:id="@+id/txthak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="학번" />
 
-                <TextView
-                    android:id="@+id/txtsubject"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center|right"
-                    android:minWidth="80dp"
-                    android:text="수강과목" />
+            <TextView
+                android:id="@+id/txtsubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:minWidth="80dp"
+                android:text="수강과목" />
 
-                <TextView
-                    android:id="@+id/txtattend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:minWidth="60dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="5dp"
-                    android:text="출석" />
+            <TextView
+                android:id="@+id/txtattend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text="출석" />
 
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
+        </TableRow>
+    </TableLayout>
 
     <ListView
         android:id="@+id/studentListview"
@@ -69,6 +64,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
