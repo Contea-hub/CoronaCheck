@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_list_student.*
 
 class ListStudent : AppCompatActivity() {
@@ -21,16 +23,15 @@ class ListStudent : AppCompatActivity() {
         var data:Any
         var bundle:Bundle
         var intent: Intent
-        val studentAdapter=adapterStudent(this,studentList)
-        val listview: ListView =findViewById(R.id.studentListview)
-        studentListview.adapter=studentAdapter
 
-        listview.setOnItemClickListener{ parent, view, position, id->
-            val selectedItem=studentAdapter.getItemId(position)
-            intent= Intent(this,studentinformation::class.java)
-            startActivity(intent)
-
+        val mAdapter=adapterStudent(this,studentList){ studentList->
+            Toast.makeText(this,"${studentList.}")
         }
+        studentRV.adapter=mAdapter
+
+        val lm=LinearLayoutManager(this)
+        studentRV.layoutManager=lm
+        studentRV.setHasFixedSize(true)
 
     }
 }

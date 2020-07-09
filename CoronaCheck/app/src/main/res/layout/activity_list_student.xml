@@ -58,12 +58,14 @@
         </TableRow>
     </TableLayout>
 
-    <ListView
-        android:id="@+id/studentListview"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
