@@ -41,7 +41,7 @@ class CheckList : AppCompatActivity() {
             q4 = false
         }   //5번 선택지
 
-        btnsignin.setOnClickListener {      //누르면 설문 결과가 메인 액티비티에 전송
+        btnsubmit.setOnClickListener {      //누르면 설문 결과가 메인 액티비티에 전송
             if(Edtname.equals("") || rdgcheck2.checkedRadioButtonId == -1 || rdgsubject.getCheckedRadioButtonId() == -1 ||
                 rdgcheck4.getCheckedRadioButtonId() == -1 || rdgcheck5.getCheckedRadioButtonId() == -1 ){
                 Toast.makeText(this, "선택지가 다 선택되지 않았습니다", Toast.LENGTH_SHORT).show()

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     data class UserInfo(var stunum : String? = null, var temp : String? =null, var q1 : Boolean? = null, var q2 : Boolean? =null,
     var q3 : Boolean? = null, var q4 : Boolean? =null)      //DB 유저 정보 저장 유형
     private fun createEmail(){
+        /*
         if(editTextTextEmailAddress.text.toString() == "" || editTextTextPassword.text.toString() == ""){
             Toast.makeText(this, "Authentication fail", Toast.LENGTH_SHORT).show()
         }else {
@@ -40,7 +41,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Authentication fail", Toast.LENGTH_SHORT).show()
                 }
             }
-        }
+        }*/
+
     }
     private fun loginEmail(){
         if(editTextTextEmailAddress.text.toString() == "" || editTextTextPassword.text.toString() == ""){
@@ -111,22 +113,6 @@ class MainActivity : AppCompatActivity() {
         }
         btnsignin.setOnClickListener {       //회원가입 버튼
             createEmail()
-/*
-        var intent:Intent
-        btnlogin.setOnClickListener{
-            if(cbadmin.isChecked)
-                intent= Intent(this,ListStudent::class.java)
-            else
-                intent=Intent(this,CheckList::class.java)
-
-            startActivity(intent)
-        }
-        btnsignin.setOnClickListener{
-            val intent= Intent(this,signin::class.java)
-            startActivity(intent)
-        }
-
- */
         }
     }
 }
