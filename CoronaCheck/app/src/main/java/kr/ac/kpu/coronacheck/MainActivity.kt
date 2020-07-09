@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun loginEmail(){
         if(editTextTextEmailAddress.text.toString() == "" || editTextTextPassword.text.toString() == ""){
             Toast.makeText(this, "signInWithEmail failed.", Toast.LENGTH_SHORT).show()
@@ -105,8 +106,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         firebaseAuth = FirebaseAuth.getInstance()//
         mDatabase = FirebaseDatabase.getInstance().reference
-        mMessageReference = FirebaseDatabase.getInstance()
-            .getReference("${editTextTextEmailAddress.text.toString()}")
+        mMessageReference = FirebaseDatabase.getInstance().getReference("${editTextTextEmailAddress.text.toString()}")
         btnlogin.setOnClickListener {        //로그인 버튼
             loginEmail()
         }
