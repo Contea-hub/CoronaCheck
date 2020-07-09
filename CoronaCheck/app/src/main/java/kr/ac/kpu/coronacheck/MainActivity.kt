@@ -113,6 +113,11 @@ class MainActivity : AppCompatActivity() {
         }
         btnsignin.setOnClickListener {       //회원가입 버튼
             createEmail()
+
+        }
+        btntmp.setOnClickListener() {
+            val intent= Intent(this, ListStudent::class.java)
+            startActivity(intent)
         }
     }
 }
