@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var mMessageReference : DatabaseReference? =null
     data class UserInfo(var stunum : String? = null, var temp : String? =null, var q1 : Boolean? = null, var q2 : Boolean? =null,
     var q3 : Boolean? = null, var q4 : Boolean? =null)      //DB 유저 정보 저장 유형
+
     private fun createEmail(){
         if(editTextTextEmailAddress.text.toString() == "" || editTextTextPassword.text.toString() == ""){
             Toast.makeText(this, "Authentication fail", Toast.LENGTH_SHORT).show()
