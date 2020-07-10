@@ -17,9 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".studentinformation" />
-        <activity android:name=".ListStudent" />
-        <activity android:name=".signin" />
-        <activity android:name=".CheckList" />
+        <activity android:name=".ListStudent"
+            android:label="학생 목록"/>
+        <activity android:name=".signin"
+            android:label="회원가입"/>
+        <activity android:name=".CheckList"
+            android:label="체크리스트"/>
         <activity android:name=".MainActivity"/>
     </application>
 
