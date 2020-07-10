@@ -1,13 +1,12 @@
 package kr.ac.kpu.coronacheck
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AdapterView
-import android.widget.ListView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_list_student.*
+
 
 class ListStudent : AppCompatActivity() {
     var studentList= arrayListOf<student>(
@@ -15,6 +14,7 @@ class ListStudent : AppCompatActivity() {
     student("정지운","2016150036","firebase",true),
     student("응옌뒤홍","2016150041","iOS",true)
     )
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,8 @@ class ListStudent : AppCompatActivity() {
         studentRV.layoutManager=lm
         studentRV.setHasFixedSize(true)
 
-        studentListview.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, position, id->
-           val selecteditem = parent.getItemAtPosition(position) as student
-            Toast.makeText(this, "이건 ${selecteditem.name} ", Toast.LENGTH_SHORT).show()
-        }
-    }
-}
 
+
+    }
+
+}

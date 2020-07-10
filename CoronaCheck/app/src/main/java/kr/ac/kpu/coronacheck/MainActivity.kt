@@ -79,9 +79,11 @@ class MainActivity : AppCompatActivity() {
                     val postListener = object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             val post = dataSnapshot.getValue()
+                            var key = database.child("posts").push().getKey()
                             Log.d(
                                 "han",
                                 dataSnapshot.child(stunum).value.toString()
+
                             )        //로그에 학번 정보 표시
                         }
 
