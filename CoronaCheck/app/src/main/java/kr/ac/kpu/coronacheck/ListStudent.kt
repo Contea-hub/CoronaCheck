@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_list_student.*
 
 class ListStudent : AppCompatActivity() {
-
+    var studentList= arrayListOf<student>(
+        student("박다수","2016150016","firebase",true),
+    student("정지운","2016150036","firebase",true),
+    student("응옌뒤홍","2016150041","iOS",true)
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,18 +23,13 @@ class ListStudent : AppCompatActivity() {
         var data:Any
         var bundle:Bundle
         var intent: Intent
-        val studentAdapter=adapterStudent(this,studentList)
-        val listview: ListView =findViewById(R.id.studentListview)
-        studentListview.adapter=studentAdapter
 
-        listview.setOnItemClickListener{ parent, view, position, id->
-            val selectedItem=studentAdapter.getItemId(position)
-            intent= Intent(this,studentinformation::class.java)
-            startActivity(intent)
+        val mAdapter=adapterStudent(this,studentList)
+        studentRV.adapter=mAdapter
 
-        val adapter = ArrayAdapter<student>(this,android.R.layout.simple_list_item_1,studentList)
-        val studentAdapter = adapterStudent(baseContext, studentList)
-        studentListview.adapter = studentAdapter
+        val lm=LinearLayoutManager(this)
+        studentRV.layoutManager=lm
+        studentRV.setHasFixedSize(true)
 
         studentListview.onItemClickListener = AdapterView.OnItemClickListener{ parent, view, position, id->
            val selecteditem = parent.getItemAtPosition(position) as student
