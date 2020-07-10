@@ -70,9 +70,7 @@ class adapterStudent(val context: Context, val rowItems:List<student>) : BaseAda
         return rowItems[position]
     }
 
-    override fun getItemId(position: Int): Long {
-        return rowItems.indexOf(getItem(position)).toLong()
-    }
+    override fun getItemId(position: Int)=position.toLong()
 
     override fun getCount(): Int {
         return rowItems.size
