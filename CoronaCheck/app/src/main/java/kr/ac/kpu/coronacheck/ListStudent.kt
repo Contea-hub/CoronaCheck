@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_list_student.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,26 +33,17 @@ class ListStudent : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference()
         database = Firebase.database.reference
-        database.child("change").child("change").setValue("0")
+        //database.child("change").child("change").setValue("0")
 
 
         val postListener = object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                studentList.add(student(dataSnapshot.child("555555").child("name").value.toString(),
-                    dataSnapshot.child("555555").child("stunum").value.toString(),
-                    dataSnapshot.child("555555").child("subsel").value.toString(),
-                    true
-                ))
-                studentList.add(student(dataSnapshot.child("555555").child("name").value.toString(),
-                    dataSnapshot.child("555555").child("stunum").value.toString(),
-                    dataSnapshot.child("555555").child("subsel").value.toString(),
-                    true
-                ))
-                studentList.add(student(dataSnapshot.child("555555").child("name").value.toString(),
-                    dataSnapshot.child("555555").child("stunum").value.toString(),
-                    dataSnapshot.child("555555").child("subsel").value.toString(),
-                    true
-                ))
+                dataSnapshot.children.forEach {
+                    val name = it.child("name").value.toString()
+                    val stunum = it.child("stunum").value.toString()
+                    val subsel = it.child("subsel").value.toString()
+                    studentList.add(student(name, stunum, subsel, true ))
+                }
 
             }
 
