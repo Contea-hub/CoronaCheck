@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class adapterStudent(val context: Context, val studentList: ArrayList<student>) :
@@ -21,8 +22,11 @@ class adapterStudent(val context: Context, val studentList: ArrayList<student>) 
 
     override fun onBindViewHolder(holder: adapterStudent.Holder, position: Int) {
         holder?.bind(studentList[position],context)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context,"Clicked: ${studentList.get(position).name}",Toast.LENGTH_SHORT).show()
+        }
     }
-    inner class Holder(itemView: View?, itemClick: (student)->Unit): RecyclerView.ViewHolder(itemView!!){
+    inner class Holder(itemView: View?/*, itemClick: (student)->Unit*/): RecyclerView.ViewHolder(itemView!!){
         val name=itemView?.findViewById<TextView>(R.id.txtname)
         val number=itemView?.findViewById<TextView>(R.id.txtnum)
         val subject=itemView?.findViewById<TextView>(R.id.txtsubject)
@@ -36,8 +40,7 @@ class adapterStudent(val context: Context, val studentList: ArrayList<student>) 
                 attend?.isChecked=true
             else
                 attend?.isChecked=false
-
-            itemView.setOnClickListener{itemClick(studentList)}
+            //itemView.setOnClickListener{itemClick(studentList)}
         }
     }
 }
