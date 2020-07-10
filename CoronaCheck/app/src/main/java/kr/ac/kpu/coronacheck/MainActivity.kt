@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                             val post = dataSnapshot.getValue()
                             Log.d(
                                 "han",
-                                dataSnapshot.child(stunum).value.toString()
+                                dataSnapshot.child(stunum).child("name").value.toString()
                             )        //로그에 학번 정보 표시
                         }
 
