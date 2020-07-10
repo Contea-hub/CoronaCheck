@@ -65,6 +65,7 @@
 
     <ListView
         android:id="@+id/studentListview"
+        android:descendantFocusability="blocksDescendants"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
