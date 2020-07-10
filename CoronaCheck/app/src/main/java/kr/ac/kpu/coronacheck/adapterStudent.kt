@@ -4,41 +4,44 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.CheckBox
-import android.widget.RadioButton
 import android.widget.TextView
+import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 
-class adapterStudent(val context: Context, val studentList:ArrayList<student>) : BaseAdapter(){
-    override fun getView(position: Int, convertiew: View?, parent: ViewGroup?): View {
-        val view:View = LayoutInflater.from(context).inflate(R.layout.item_student,null)
-
-        val name=view.findViewById<TextView>(R.id.txtname)
-        val number=view.findViewById<TextView>(R.id.txtnum)
-        val subject=view.findViewById<TextView>(R.id.txtsubject)
-        val attend=view.findViewById<CheckBox>(R.id.check)
-
-        val student=studentList[position]
-        name.text=student.name
-        number.text=student.number
-        subject.text=student.subject
-        when(student.checking){
-            true->attend.isChecked=true
-            false->attend.isChecked=false
-        }
-        return view
+class adapterStudent(val context: Context, val studentList: ArrayList<student>) :
+    RecyclerView.Adapter<adapterStudent.Holder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): adapterStudent.Holder {
+        val view=LayoutInflater.from(context).inflate(R.layout.item_student,parent,false)
+        return Holder(view)
     }
 
-    override fun getItem(position: Int): Any {
-        return studentList[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return 0
-    }
-
-    override fun getCount(): Int {
+    override fun getItemCount(): Int {
         return studentList.size
     }
 
+    override fun onBindViewHolder(holder: adapterStudent.Holder, position: Int) {
+        holder?.bind(studentList[position],context)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context,"Clicked: ${studentList.get(position).name}",Toast.LENGTH_SHORT).show()
+        }
+    }
+    inner class Holder(itemView: View?/*, itemClick: (student)->Unit*/): RecyclerView.ViewHolder(itemView!!){
+        val name=itemView?.findViewById<TextView>(R.id.txtname)
+        val number=itemView?.findViewById<TextView>(R.id.txtnum)
+        val subject=itemView?.findViewById<TextView>(R.id.txtsubject)
+        val attend=itemView?.findViewById<CheckBox>(R.id.check)
+
+        fun bind(stu:student,context:Context){
+            name?.text=stu.name
+            number?.text=stu.number
+            subject?.text=stu.subject
+            if(stu.checking)
+                attend?.isChecked=true
+            else
+                attend?.isChecked=false
+            //itemView.setOnClickListener{itemClick(studentList)}
+        }
+    }
 }
+

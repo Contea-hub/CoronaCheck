@@ -72,17 +72,29 @@
         app:srcCompat="@drawable/kpu" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbautologin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="120dp"
         android:checked="true"
-        android:text="자동로그인"
         android:fontFamily="@font/gothic"
+        android:text="자동로그인"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <CheckBox
+        android:id="@+id/cbadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="65dp"
+        android:checked="true"
+        android:fontFamily="@font/gothic"
+        android:text="관리자 권한"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <Button
@@ -94,7 +106,7 @@
         android:fontFamily="@font/gothicbold"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/cbautologin" />
 
     <Button
         android:id="@+id/btnsignin"
@@ -105,6 +117,16 @@
         android:fontFamily="@font/gothicbold"
         android:text="Sign-in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/cbautologin" />
+
+    <Button
+        android:id="@+id/btntmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:text="임시버튼"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

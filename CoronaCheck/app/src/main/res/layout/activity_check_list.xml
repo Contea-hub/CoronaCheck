@@ -18,7 +18,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnsignin"
+                android:id="@+id/btnsubmit"
                 android:layout_width="177dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="30dp"
@@ -84,13 +84,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtnum">
 
                 <RadioButton
-                    android:id="@+id/pos2"
+                    android:id="@+id/pos1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="예" />
 
                 <RadioButton
-                    android:id="@+id/neg2"
+                    android:id="@+id/neg1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="아니오" />
@@ -117,13 +117,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtsubject">
 
                 <RadioButton
-                    android:id="@+id/pos"
+                    android:id="@+id/pos2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="예" />
 
                 <RadioButton
-                    android:id="@+id/neg"
+                    android:id="@+id/neg2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="아니오" />
@@ -150,13 +150,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtpassword">
 
                 <RadioButton
-                    android:id="@+id/pos4"
+                    android:id="@+id/pos3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="예" />
 
                 <RadioButton
-                    android:id="@+id/neg4"
+                    android:id="@+id/neg3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="아니오" />
@@ -183,13 +183,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/check5">
 
                 <RadioButton
-                    android:id="@+id/pos5"
+                    android:id="@+id/pos4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="예" />
 
                 <RadioButton
-                    android:id="@+id/neg5"
+                    android:id="@+id/neg4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="아니오" />
