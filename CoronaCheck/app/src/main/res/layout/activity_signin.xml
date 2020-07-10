@@ -25,6 +25,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"
                 android:text="Sign-in"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="5dp"
                 android:text="1. 이름"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -59,6 +61,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:ems="10"
+                android:fontFamily="@font/gothic"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +74,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="2. 학번"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Edtname" />
 
@@ -82,6 +86,7 @@
                 android:layout_marginTop="10dp"
                 android:autofillHints=""
                 android:background="@drawable/button"
+                android:fontFamily="@font/gothic"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/gothic"
                 android:layout_marginTop="20dp"
                 android:text="3. 수강과목"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,12 +117,14 @@
                     android:id="@+id/pos2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="Firebase" />
 
                 <RadioButton
                     android:id="@+id/neg2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="iOS Swift" />
             </RadioGroup>
 
@@ -126,6 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/gothic"
                 android:text="4. 비밀번호"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rdgsubject" />
@@ -137,6 +146,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
+                android:fontFamily="@font/gothic"
                 android:ems="10"
                 android:inputType="textPassword"
                 app:layout_constraintStart_toStartOf="parent"
@@ -148,6 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/gothic"
                 android:text="5. 비밀번호 확인"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
@@ -159,6 +170,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
+                android:fontFamily="@font/gothic"
                 android:ems="10"
                 android:inputType="textPassword"
                 app:layout_constraintStart_toStartOf="parent"

@@ -18,9 +18,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class ListStudent : AppCompatActivity() {
     var studentList= arrayListOf<student>(
-        student("박다수","2016150016","firebase",true),
-    student("정지운","2016150036","firebase",true),
-    student("응옌뒤홍","2016150041","iOS",true)
     )
 
     private lateinit var database : DatabaseReference

@@ -24,6 +24,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:minWidth="60dp"
+                android:fontFamily="@font/gothic"
                 android:text="이름" />
 
             <TextView
@@ -33,6 +34,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:minWidth="50dp"
+                android:fontFamily="@font/gothic"
                 android:text="학번" />
 
             <TextView
@@ -42,6 +44,7 @@
                 android:layout_weight="1"
                 android:gravity="center|right"
                 android:minWidth="80dp"
+                android:fontFamily="@font/gothic"
                 android:text="수강과목" />
 
             <TextView
@@ -53,6 +56,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:minWidth="60dp"
+                android:fontFamily="@font/gothic"
                 android:text="출석" />
 
         </TableRow>

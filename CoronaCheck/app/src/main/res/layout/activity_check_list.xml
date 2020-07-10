@@ -24,6 +24,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="50dp"
                 android:text="확인"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="5dp"
                 android:text="1. 발열 온도 체크"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -59,6 +61,7 @@
                 android:background="@drawable/button"
                 android:ems="10"
                 android:hint="℃"
+                android:fontFamily="@font/gothic"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtname" />
@@ -69,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/gothic"
                 android:text="2. 마른 기침, 콧물 등의 감기 증상 여부"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Edtname" />
@@ -87,12 +91,14 @@
                     android:id="@+id/pos1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="예" />
 
                 <RadioButton
                     android:id="@+id/neg1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="아니오" />
             </RadioGroup>
 
@@ -103,6 +109,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
                 android:text="3. 피로감, 전신통증, 두통, 인후통, 설사 증상 여부"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rdgcheck2" />
 
@@ -120,12 +127,14 @@
                     android:id="@+id/pos2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="예" />
 
                 <RadioButton
                     android:id="@+id/neg2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="아니오" />
             </RadioGroup>
 
@@ -136,6 +145,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
                 android:text="4. 마스크 착용 여부"
+                android:fontFamily="@font/gothic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rdgsubject" />
 
@@ -153,12 +163,14 @@
                     android:id="@+id/pos3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="예" />
 
                 <RadioButton
                     android:id="@+id/neg3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="아니오" />
             </RadioGroup>
 
@@ -168,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/gothic"
                 android:text="5. 손 소독 여부"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rdgcheck4" />
@@ -186,12 +199,14 @@
                     android:id="@+id/pos4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="예" />
 
                 <RadioButton
                     android:id="@+id/neg4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothic"
                     android:text="아니오" />
 
             </RadioGroup>
